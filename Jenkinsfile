@@ -7,7 +7,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "CKShetty4/demo-app"
+        IMAGE_NAME = "ckshetty4/demo-app"
         IMAGE_TAG = "latest"
     }
 
@@ -15,7 +15,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/CKShetty4/demo-app.git'
+                git branch: 'main', url: 'https://github.com/ckshetty4/demo-app.git'
             }
         }
 
