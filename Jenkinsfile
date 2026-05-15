@@ -15,7 +15,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/CKShetty4/demo-app.git'
+                git branch: 'main', url: 'https://github.com/CKShetty4/demo-app.git'
             }
         }
 
