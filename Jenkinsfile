@@ -27,14 +27,8 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarServer') {
-                    withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
-                        sh '''
-                        mvn sonar:sonar \
-                        -Dsonar.projectKey=demo-app \
-                        -Dsonar.token=$SONAR_TOKEN
-                        '''
-                    }
+                withSonarQubeEnv('sonarqube') {
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=demo-app'
                 }
             }
         }
