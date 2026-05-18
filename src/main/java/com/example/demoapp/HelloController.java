@@ -8,6 +8,6 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        return "DevOps CI/CD Pipeline is Working! And Pipeline is working.....";
+        return "New Version Successfully Deployed via Jenkins Pipeline!";
     }
 }
